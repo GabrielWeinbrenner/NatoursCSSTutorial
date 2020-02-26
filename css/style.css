@@ -43,7 +43,10 @@ body{
 .logo {
     height: 35px;
 }
-
+.logo:hover {
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+}
 .text-box{
     position: absolute;
     top: 40%;
@@ -57,11 +60,13 @@ body{
 }
 
 .heading-primary-main{
-
     display: block;
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
 
 }
 
@@ -70,4 +75,35 @@ body{
     font-weight: 700;
     letter-spacing: 17.5px;
     display: block;
+
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        trasnform: translateX(0);
+    }
 }
