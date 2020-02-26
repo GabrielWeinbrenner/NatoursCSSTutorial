@@ -44,19 +44,22 @@ body{
     height: 35px;
 }
 .logo:hover {
-    animation-name: moveInRight;
-    animation-duration: 1.5s;
+    height:40px;
+    transform: translateX(-10%);
 }
 .text-box{
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 60px;
+
 }
 
 .heading-primary-main{
@@ -106,4 +109,28 @@ body{
         opacity: 1;
         trasnform: translateX(0);
     }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    /* Give highlighting to element and go to next line*/
+    display: inline-block; 
+    border-radius: 100px;
+    transition: all .2s;
+}
+.btn:hover{
+    transform: translateY(-3px);
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.btn-white{
+    background:#fff;
+    color: #777777;
 }
